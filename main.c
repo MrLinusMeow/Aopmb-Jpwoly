@@ -43,6 +43,8 @@ void shift(char* arg){
 					fputc(digit[1], keyf);
 				}else{ digit[1] = '\0'; }
 			}else{ printf("Not a number: %x\n", digit[0]); abort(); }
+		}else if(arg[i] == ' '){
+			continue;
 		}else{ printf("Not a letter: %2x\n", arg[i]); abort(); }
 		arg[i] = ((arg[i] + num) % 25) + 'A';
 		num = '\0';
